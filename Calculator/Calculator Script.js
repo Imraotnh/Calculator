@@ -7,7 +7,6 @@
     
     jQuery(".regularButton").add(".widerButton").add(".higherButton").click(function () {
         var $target = $(this);
-        console.log(expression);
 
         if ($target.text() !== "C" && $target.text() !== "=" && $target.text() !== "±") {
             if ($.inArray($target.text(), notNumbers) !== -1 && $.inArray(expression.slice(-1), notNumbers) !== -1) {
