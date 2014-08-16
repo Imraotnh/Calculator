@@ -65,7 +65,8 @@ td {
 }
 
 .result {
-    height: 50px;
-    width: 297px;
+    height: 46px;
+    width: 222px;
     text-align: right;
+    padding-right: 15px;
 }

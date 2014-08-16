@@ -5,15 +5,18 @@
     <link href="Calculator%20Styles.css" rel="stylesheet" />    
 </head>
 <body>
-    <table>
+    <table id="main">
         <tr>
-            <td colspan="5">
-                <input type="text" class="result" value="Reset the form" />
+            <td>
+                <button class="regularButton" id="7">C</button>
+            </td>
+            <td colspan="4">
+                <input type="text" class="result" value="" />
             </td>
         </tr>
         <tr>
             <td>
-                <button class="regularButton" class ="number" id="7">7</button>
+                <button class="regularButton" id="7">7</button>
             </td>
             <td>
                 <button class="regularButton" id="8">8</button>
@@ -42,8 +45,8 @@
                 <button class="regularButton" id="7">*</button>
             </td>
             <td>
-                <button class="regularButton" id="1/x">1/x</button>
-            </td>
+                <button class="regularButton" id="7">±</button>
+            </td>            
         </tr>
         <tr>
             <td>
@@ -77,7 +80,9 @@
     <script src="jquery.min.js"></script>
     <script src="Calculator%20Script.js"></script>
     <script>
-        
+        $(function () {
+            $('#main').calculator();
+        });
     </script>
 </body>
 </html>
