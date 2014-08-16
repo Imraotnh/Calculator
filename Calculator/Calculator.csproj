@@ -68,6 +68,7 @@
     <Content Include="Calculator Script.js" />
     <Content Include="Calculator Styles.css" />
     <Content Include="Calculator.html" />
+    <Content Include="jquery.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
