@@ -3,14 +3,18 @@
 		$parentNode = $this;
 
     var expression = "";
-    var notNumbers = ["+", "-", "/", "*", "%", ".", "±"];
-
+    var notNumbers = ["+", "-", "/", "*", "%", ".", "±", "="];
+    
     jQuery(".regularButton").add(".widerButton").add(".higherButton").click(function () {
         var $target = $(this);
-        console.log($target.text())
+        console.log(expression);
 
         if ($target.text() !== "C" && $target.text() !== "=" && $target.text() !== "±") {
             if ($.inArray($target.text(), notNumbers) !== -1 && $.inArray(expression.slice(-1), notNumbers) !== -1) {
+                alert("Not allowed!");
+            }
+
+            else if (expression.length === 0 && $.inArray($target.text(), notNumbers) !== -1 && $target.text() !== "-") {
                 alert("Not allowed!");
             }
 
@@ -24,7 +28,15 @@
         }
 
         else if ($target.text() === "±") {
-            if (expression.slice(0, 1) === "-") {               
+            if (expression.length === 0) {
+                alert("Not allowed!");
+            }
+
+            else if (!$.isNumeric(expression)) {
+                alert("Not allowed!");
+            }
+
+            else if (expression.slice(0, 1) === "-") {
                 expression = expression.substring(1);
             }
 
