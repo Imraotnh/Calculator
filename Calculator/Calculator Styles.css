@@ -21,7 +21,7 @@ td {
     padding: 5px;
 }
 
-.regularButton, .widerButton, .result {
+.regularButton, .widerButton, .higherButton, .result {
     border-radius: 7px;
     border: 1px solid black;
     font: 22px Calibri;
@@ -35,7 +35,7 @@ td {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fbff', endColorstr='#f0f9fd',GradientType=0 ); /* IE6-9 */
 }
 
-    .regularButton:hover, .widerButton:hover {
+    .regularButton:hover, .widerButton:hover, .higherButton:hover  {
         border-radius: 7px;
         border: 1px solid black;
         font: 22px Calibri;
@@ -57,6 +57,11 @@ td {
 .widerButton {
     height: 50px;
     width: 112px;
+}
+
+.higherButton {
+    height: 112px;
+    width: 50px;
 }
 
 .result {
